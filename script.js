@@ -42,3 +42,26 @@ window.onload = function () {
             updateCart();
         }
     };
+
+      
+    cartContainer.onclick = handleCartClick;
+    cartContentMobile.onclick = handleCartClick;
+
+    function handleCartClick(event) {
+        const el = event.target;
+        const parentBtn = el.tagName === "BUTTON" ? el : el.parentElement;
+        if (!parentBtn || !parentBtn.getAttribute("data-index")) return;
+        const index = parseInt(parentBtn.getAttribute("data-index"));
+
+        if (parentBtn.className === "plus") {
+            cart[index].quantity++;
+        } else if (parentBtn.className === "minus") {
+            cart[index].quantity--;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+        } else if (parentBtn.className === "remove") {
+            cart.splice(index, 1);
+        }
+        updateCart();
+    }
