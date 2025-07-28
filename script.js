@@ -109,3 +109,15 @@ window.onload = function () {
     document.getElementById("popup-close").onclick = function () {
         orderPopup.style.display = "none";
     };
+    
+    mobileCartBtn.onclick = function () {
+        cartOverlay.classList.add("active");
+        renderMobileCart();
+    };
+    closeCart.onclick = function () {
+        cartOverlay.classList.remove("active");
+    };
+
+    function renderMobileCart() {
+        cartContentMobile.innerHTML = cartContainer.innerHTML;
+    }
