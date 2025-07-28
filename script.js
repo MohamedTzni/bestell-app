@@ -136,3 +136,41 @@ window.onload = function () {
             cart.push({ name: dish.name, price: dish.preis, quantity: 1 });
         }
     }
+
+        function updateCart() {
+        cartContainer.innerHTML = "";
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Noch leer</p>";
+            renderMobileCart();
+            return;
+        }
+
+        let sum = 0;
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+            sum += item.price * item.quantity;
+            const div = document.createElement("div");
+            div.classList.add("cart-item");
+            div.innerHTML =
+                "<strong>" + item.name + "</strong><br>" +
+                item.quantity + " x " + item.price.toFixed(2) + " € = " + (item.quantity * item.price).toFixed(2) + " €" +
+                '<div class="cart-buttons">' +
+                    '<button class="plus" data-index="' + i + '"><img src="./icon/button_add.jpg" alt="mehr"></button>' +
+                    '<button class="minus" data-index="' + i + '"><img src="./icon/button_remove.jpg" alt="weniger"></button>' +
+                    '<button class="remove" data-index="' + i + '"><img src="./icon/trash.jpg" alt="löschen"></button>' +
+                '</div>';
+            cartContainer.appendChild(div);
+        }
+
+        const sumDiv = document.createElement("div");
+        sumDiv.classList.add("cart-summary");
+        sumDiv.innerHTML =
+            "<strong>Summe: " + sum.toFixed(2) + " €</strong><br>" +
+            '<span class="highlight-red">Mindestbestellwert: 10 €</span>';
+        cartContainer.appendChild(sumDiv);
+
+        renderMobileCart();
+    }
+
+    updateCart();
+};
