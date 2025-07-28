@@ -52,3 +52,24 @@ header {
 .content-wrapper { display: flex; padding: 20px; gap: 20px; }
 .content { flex: 3; }
 
+.dishes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.dish {
+  display: flex;
+  background: #eee;
+  padding: 12px;
+  border-radius: 8px;
+  align-items: center;
+  gap: 12px;
+}
+.dish img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.dish-info { flex: 1; }
