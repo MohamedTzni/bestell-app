@@ -4,3 +4,23 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
+header {
+  height: 120px;
+  background-color: #ff8000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo { height: 80px; }
+
+.header-right a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
