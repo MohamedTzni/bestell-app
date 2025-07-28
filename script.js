@@ -31,3 +31,14 @@ window.onload = function () {
         html += createDishTemplate(dishes[i], i);
     }
     dishesContainer.innerHTML = html;
+
+        
+    dishesContainer.onclick = function (event) {
+        const element = event.target;
+        if (element.className === "add-btn" || element.parentElement.className === "add-btn") {
+            const button = element.className === "add-btn" ? element : element.parentElement;
+            const index = parseInt(button.getAttribute("data-index"));
+            addToCart(index);
+            updateCart();
+        }
+    };
