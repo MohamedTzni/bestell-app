@@ -65,3 +65,16 @@ window.onload = function () {
         }
         updateCart();
     }
+
+        // Bestellung starten
+    orderBtn.onclick = handleOrder;
+    orderBtnMobile.onclick = handleOrder;
+
+    minContinue.onclick = function () {
+        minPopup.style.display = "none";
+        completeOrder();
+    };
+    minCancel.onclick = function () {
+        minPopup.style.display = "none";
+    };
+
