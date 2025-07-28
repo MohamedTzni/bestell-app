@@ -78,3 +78,34 @@ window.onload = function () {
         minPopup.style.display = "none";
     };
 
+    function handleOrder() {
+        if (cart.length === 0) {
+            alert("Der Warenkorb ist leer!");
+            return;
+        }
+
+        let sum = 0;
+        for (let i = 0; i < cart.length; i++) {
+            sum += cart[i].price * cart[i].quantity;
+        }
+        totalGlobal = sum;
+
+        if (sum < 10) {
+            minPopupText.innerText = "Der Mindestbestellwert beträgt 10 €. Ihr aktueller Bestellwert liegt bei " + sum.toFixed(2) + " €. Möchten Sie trotzdem bestellen?";
+            minPopup.style.display = "flex";
+            return;
+        }
+
+        completeOrder();
+    }
+
+    function completeOrder() {
+        cart = [];
+        updateCart();
+        orderPopup.style.display = "flex";
+        cartOverlay.classList.remove("active");
+    }
+
+    document.getElementById("popup-close").onclick = function () {
+        orderPopup.style.display = "none";
+    };
