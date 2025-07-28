@@ -9,85 +9,80 @@
   </head>
   <body>
     <header>
-  <div class="header-left">
-    <img src="./img/Logo.png" alt="Logo Pizzeria Roma" class="logo" />
-  </div>
-  <button class="hamburger">&#9776;</button>
-  <nav class="header-right">
-    <a href="#">Über uns</a>
-    <a href="#">Kontakt</a>
-    <a href="#">Anfahrt</a>
-  </nav>
-</header>
-<section class="hero">
-  <img src="./img/pizzeria.jpg" alt="Pizzeria" />
-</section>
+      <div class="header-left">
+        <img src="./img/Logo.png" alt="Logo Pizzeria Roma" class="logo" />
+      </div>
+      <button class="hamburger">&#9776;</button>
+      <nav class="header-right">
+        <a href="#">Über uns</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Anfahrt</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <img src="./img/pizzeria.jpg" alt="Pizzeria" />
+    </section>
 
-<div class="hero-logo-overlay">
-  <img src="./icon/italien.png" alt="Logo Pizzeria Roma" />
-</div>
-<div class="content-wrapper">
-  <section class="content">
-    <h1>Willkommen bei Pizzeria-Roma</h1>
-    <p>Lieferzeit: ca. 30-45 Min | Liefergebühr: 2,50 €</p>
-    <p>Bewertung: ⭐ 4,5 / 5</p>
-    <p class="highlight-red">Mindestbestellwert: 10 €</p>
-    <div id="dishes-container" class="dishes"></div>
-  </section>
-  <aside class="cart">
-    <h2>Warenkorb</h2>
-    <div class="cart-content">
-      <p>Noch leer</p>
+    <div class="hero-logo-overlay">
+      <img src="./icon/italien.png" alt="Logo Pizzeria Roma" />
     </div>
-    <div class="cart-actions">
-      <button class="order-btn">Bestellen</button>
+    <div class="content-wrapper">
+      <section class="content">
+        <h1>Willkommen bei Pizzeria-Roma</h1>
+        <p>Lieferzeit: ca. 30-45 Min | Liefergebühr: 2,50 €</p>
+        <p>Bewertung: ⭐ 4,5 / 5</p>
+        <p class="highlight-red">Mindestbestellwert: 10 €</p>
+        <div id="dishes-container" class="dishes"></div>
+      </section>
+      <aside class="cart">
+        <h2>Warenkorb</h2>
+        <div class="cart-content">
+          <p>Noch leer</p>
+        </div>
+        <div class="cart-actions">
+          <button class="order-btn">Bestellen</button>
+        </div>
+      </aside>
     </div>
-  </aside>
-</div>
 
-<footer>
-  <div class="footer-left">&copy; 2025 Mohamed Touzani</div>
-  <div class="footer-right">
-    <a href="#">Datenschutz</a>
-    <a href="#">Impressum</a>
-  </div>
-</footer>
-<button id="mobile-cart-btn">Warenkorb anzeigen</button>
-<div id="cart-overlay">
-  <button id="close-cart">Schließen</button>
-  <div class="cart-content-mobile"></div>
-  <div class="cart-actions-mobile">
-    <button class="order-btn-mobile">Bestellen</button>
-  </div>
-</div>
-
-<div id="order-popup" class="popup">
-  <div class="popup-content">
-    <p>Vielen Dank für Ihre Bestellung!</p>
-    <button id="popup-close">OK</button>
-  </div>
-</div>
-
-<div id="min-popup" class="popup">
-  <div class="popup-content">
-    <p id="min-popup-text">
-      Der Mindestbestellwert beträgt 10 €. Möchten Sie trotzdem bestellen?
-    </p>
-    <div class="min-popup-buttons">
-      <button id="min-continue" class="btn-orange">
-        Trotzdem bestellen
-      </button>
-      <button id="min-cancel" class="btn-grey">
-        Abbrechen
-      </button>
+    <footer>
+      <div class="footer-left">&copy; 2025 Mohamed Touzani</div>
+      <div class="footer-right">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+      </div>
+    </footer>
+    <button id="mobile-cart-btn">Warenkorb anzeigen</button>
+    <div id="cart-overlay">
+      <button id="close-cart">Schließen</button>
+      <div class="cart-content-mobile"></div>
+      <div class="cart-actions-mobile">
+        <button class="order-btn-mobile">Bestellen</button>
+      </div>
     </div>
-  </div>
-</div>
-<script src="data.js"></script>
-<script src="template.js"></script>
-<script src="script.js"></script>
 
+    <div id="order-popup" class="popup">
+      <div class="popup-content">
+        <p>Vielen Dank für Ihre Bestellung!</p>
+        <button id="popup-close">OK</button>
+      </div>
+    </div>
 
-
+    <div id="min-popup" class="popup">
+      <div class="popup-content">
+        <p id="min-popup-text">
+          Der Mindestbestellwert beträgt 10 €. Möchten Sie trotzdem bestellen?
+        </p>
+        <div class="min-popup-buttons">
+          <button id="min-continue" class="btn-orange">
+            Trotzdem bestellen
+          </button>
+          <button id="min-cancel" class="btn-grey">Abbrechen</button>
+        </div>
+      </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="template.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
