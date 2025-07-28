@@ -19,3 +19,9 @@ window.onload = function () {
 
     const hamburger = document.getElementsByClassName("hamburger")[0];
     const navMenu = document.getElementsByClassName("header-right")[0];
+
+      
+    hamburger.onclick = function () {
+        navMenu.classList.toggle("show");
+    };
+
