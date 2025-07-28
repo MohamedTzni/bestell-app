@@ -121,3 +121,18 @@ window.onload = function () {
     function renderMobileCart() {
         cartContentMobile.innerHTML = cartContainer.innerHTML;
     }
+
+        function addToCart(index) {
+        const dish = dishes[index];
+        let found = false;
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].name === dish.name) {
+                cart[i].quantity++;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            cart.push({ name: dish.name, price: dish.preis, quantity: 1 });
+        }
+    }
