@@ -49,3 +49,6 @@ header {
   padding: 3px;
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
+.content-wrapper { display: flex; padding: 20px; gap: 20px; }
+.content { flex: 3; }
+
