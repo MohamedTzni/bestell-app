@@ -25,3 +25,9 @@ window.onload = function () {
         navMenu.classList.toggle("show");
     };
 
+    
+    let html = "";
+    for (let i = 0; i < dishes.length; i++) {
+        html += createDishTemplate(dishes[i], i);
+    }
+    dishesContainer.innerHTML = html;
