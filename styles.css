@@ -73,3 +73,18 @@ header {
   border-radius: 8px;
 }
 .dish-info { flex: 1; }
+.add-btn {
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  padding: 0;
+}
+.add-btn:hover { background-color: #ddd; }
+.add-btn img { width: 20px; height: 20px; pointer-events: none; }
